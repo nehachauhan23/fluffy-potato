@@ -7,13 +7,13 @@ import { redirect } from "next/navigation";
 async function Page(){
   const user = await currentUser();
 
-  console.log("user: ", user);
+  // console.log("user: ", user);
   
   if(!user) return null;
 
   const userInfo = await fetchUser(user.id);
 
-  console.log("test",userInfo);
+  // console.log("test",userInfo);
   
   if(!userInfo?.onboarded) redirect('/onboarding')
 
