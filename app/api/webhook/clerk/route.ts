@@ -71,13 +71,14 @@ export const POST = async (request: Request) => {
 
     try {
       // @ts-ignore
+      const orgbio = `This is a community about ${name}`
       await createCommunity(
         // @ts-ignore
         id,
         name,
         slug,
         logo_url || image_url,
-        name,
+        orgbio,
         created_by
       );
 
